@@ -1,20 +1,5 @@
 return {
   {
-    "sainnhe/gruvbox-material",
-    enabled = true,
-    priority = 1000,
-    config = function()
-      vim.g.gruvbox_material_transparent_background = 0
-      vim.g.gruvbox_material_foreground = "mix"
-      vim.g.gruvbox_material_background = "hard"    -- soft, medium, hard
-      vim.g.gruvbox_material_ui_contrast = "high"   -- The contrast of line numbers, indent lines, etc.
-      vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
-      vim.g.gruvbox_material_statusline_style = "material"
-      vim.g.gruvbox_material_cursor = "auto"
-    end,
-    vim.api.nvim_command("colorscheme gruvbox-material")
-  },
-  {
     "catppuccin/nvim",
     priority = 150,
     name = "catppuccin",
@@ -37,7 +22,7 @@ return {
       vim.api.nvim_set_hl(0, "NavicText", { default = true, bg = "none", fg = "#eedaad" })
       vim.api.nvim_set_hl(0, "NavicSeparator", { default = true, bg = "none", fg = "#eedaad" })
       --
-      --vim.api.nvim_command("colorscheme catppuccin-macchiato")
+      --      vim.api.nvim_command("colorscheme catppuccin-macchiato")
     end,
   },
   {
@@ -46,17 +31,6 @@ return {
     lazy = false,
     priority = 1000,
     opts = {},
-  },
-  {
-    "LunarVim/primer.nvim",
-    enabled = false,
-    priority = 1000,
-    config = function()
-      --vim.cmd.colorscheme 'primer_dark'
-    end,
-  },
-  {
-    "EdenEast/nightfox.nvim",
   },
   {
     "rose-pine/neovim",
@@ -87,28 +61,21 @@ return {
         },
       })
 
-      --      vim.cmd.colorscheme("rose-pine")
+      --vim.cmd.colorscheme("rose-pine")
     end,
   },
   {
-    "oxfist/night-owl.nvim",
-    enabled = false,
-    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+    "neanias/everforest-nvim",
+    name = "everforest",
+    version = false,
+    lazy = false,
     priority = 1000, -- make sure to load this before all the other start plugins
+    -- Optional; default configuration will be used if setup isn't called.
     config = function()
-      local night_owl = require("night-owl")
-
-      -- 👇 Add your own personal settings here
-      night_owl.setup({
-        -- These are the default settings
-        bold = false,
-        italics = false,
-        underline = false,
-        undercurl = false,
+      require("everforest").setup({
+        -- Your config here
       })
-
-      -- load the colorscheme here
-      -- vim.cmd.colorscheme("night-owl")
+      vim.cmd.colorscheme("everforest")
     end,
   },
 }
