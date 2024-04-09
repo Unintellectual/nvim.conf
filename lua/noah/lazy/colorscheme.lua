@@ -3,7 +3,7 @@ return {
     "catppuccin/nvim",
     priority = 150,
     name = "catppuccin",
-    config = function()
+    cosnfig = function()
       require("catppuccin").setup({
 
         transparent_background = false, -- disables setting the background color.
