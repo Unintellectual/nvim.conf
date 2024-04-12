@@ -1,38 +1,5 @@
 return {
   {
-    "catppuccin/nvim",
-    priority = 150,
-    name = "catppuccin",
-    cosnfig = function()
-      require("catppuccin").setup({
-
-        transparent_background = false, -- disables setting the background color.
-        integrations = {
-          cmp = true,
-          gitsigns = true,
-          treesitter = true,
-          notify = false,
-          telescope = {
-            enabled = true,
-            style = "nvchad",
-          },
-        },
-      })
-      vim.api.nvim_set_hl(0, "NavicIconsOperator", { default = true, bg = "none", fg = "#eedaad" })
-      vim.api.nvim_set_hl(0, "NavicText", { default = true, bg = "none", fg = "#eedaad" })
-      vim.api.nvim_set_hl(0, "NavicSeparator", { default = true, bg = "none", fg = "#eedaad" })
-      --
-      -- vim.api.nvim_command("colorscheme catppuccin-macchiato")
-    end,
-  },
-  {
-    "folke/tokyonight.nvim",
-    enabled = false,
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-  {
     "rose-pine/neovim",
     name = "rose-pine",
     priority = 1000,
@@ -61,7 +28,7 @@ return {
         },
       })
 
-      vim.cmd.colorscheme("rose-pine")
+      -- vim.cmd.colorscheme("rose-pine")
     end,
   },
   {
@@ -77,11 +44,11 @@ return {
         background = "hard",
         ---How much of the background should be transparent. 2 will have more UI
         ---components be transparent (e.g. status line background)
-        transparent_background_level = 2,
+        transparent_background_level = 0,
 
 
       })
-      -- vim.cmd.colorscheme("everforest")
+      vim.cmd.colorscheme("everforest")
     end,
   },
 }
