@@ -44,7 +44,7 @@ return {
         background = "hard",
         ---How much of the background should be transparent. 2 will have more UI
         ---components be transparent (e.g. status line background)
-        transparent_background_level = 0,
+        transparent_background_level = 2,
 
 
       })
