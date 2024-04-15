@@ -10,7 +10,7 @@ return {
         styles = {
           bold = false,
           italic = false,
-          transparency = false,
+          transparency = true,
         },
         highlight_groups = {
           TelescopeBorder = { fg = "overlay", bg = "overlay" },
@@ -48,7 +48,23 @@ return {
 
 
       })
-      vim.cmd.colorscheme("everforest")
+      -- vim.cmd.colorscheme("everforest")
     end,
   },
+  {
+    "dasupradyumna/midnight.nvim",
+    name = 'midnight',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("midnight").setup({
+
+
+
+      })
+      vim.cmd.colorscheme 'midnight'
+    end,
+
+  },
+
 }
