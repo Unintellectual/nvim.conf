@@ -1,9 +1,9 @@
 function ColorMyPencils(color)
-	color = color or "lackluster"
+	color = "evergarden"
 	vim.cmd.colorscheme(color)
 
-	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 end
 
@@ -73,4 +73,25 @@ return {
             -- vim.cmd.colorscheme("lackluster-mint")
         end,
     },
+    {
+  'comfysage/evergarden',
+  priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+  opts = {
+    theme = {
+      variant = 'fall', -- 'winter'|'fall'|'spring'
+      accent = 'green',
+    },
+    editor = {
+      transparent_background = false,
+      sign = { color = 'none' },
+      float = {
+        color = 'mantle',
+        invert_border = false,
+      },
+      completion = {
+        color = 'surface0',
+      },
+    },
+  }
+}
 }
