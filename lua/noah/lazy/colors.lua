@@ -1,10 +1,9 @@
 function ColorMyPencils(color)
-	color = "evergarden"
-	vim.cmd.colorscheme(color)
+    color = "gruber-darker"
+    vim.cmd.colorscheme(color)
 
-	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-
+    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 return {
@@ -14,8 +13,8 @@ return {
             require("tokyonight").setup({
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
-                style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-                transparent = true, -- Enable this to disable setting the background color
+                style = "night",        -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+                transparent = true,     -- Enable this to disable setting the background color
                 terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
                 styles = {
                     -- Style to be applied to different syntax groups
@@ -24,7 +23,7 @@ return {
                     keywords = { italic = false },
                     -- Background styles. Can be "dark", "transparent" or "normal"
                     sidebars = "dark", -- style for sidebars, see below
-                    floats = "dark", -- style for floating windows
+                    floats = "dark",   -- style for floating windows
                 },
             })
         end
@@ -47,7 +46,7 @@ return {
     {
         "alexxGmZ/e-ink.nvim",
         priority = 1000,
-        config = function ()
+        config = function()
             require("e-ink").setup()
             vim.cmd.colorscheme "e-ink"
 
@@ -74,24 +73,44 @@ return {
         end,
     },
     {
-  'comfysage/evergarden',
-  priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
-  opts = {
-    theme = {
-      variant = 'fall', -- 'winter'|'fall'|'spring'
-      accent = 'green',
+        "blazkowolf/gruber-darker.nvim",
+        opts = {
+            bold = false,
+            invert = {
+                signs = false,
+                tabline = false,
+                visual = false,
+            },
+            italic = {
+                strings = true,
+                comments = true,
+                operators = false,
+                folds = true,
+            },
+            undercurl = true,
+            underline = true,
+        }
     },
-    editor = {
-      transparent_background = false,
-      sign = { color = 'none' },
-      float = {
-        color = 'mantle',
-        invert_border = false,
-      },
-      completion = {
-        color = 'surface0',
-      },
-    },
-  }
-}
+
+    {
+        'comfysage/evergarden',
+        priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+        opts = {
+            theme = {
+                variant = 'fall', -- 'winter'|'fall'|'spring'
+                accent = 'green',
+            },
+            editor = {
+                transparent_background = false,
+                sign = { color = 'none' },
+                float = {
+                    color = 'mantle',
+                    invert_border = false,
+                },
+                completion = {
+                    color = 'surface0',
+                },
+            },
+        }
+    }
 }
