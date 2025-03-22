@@ -1,6 +1,6 @@
 require("noah.set")
 require("noah.remap")
-
+require("noah.config.terminal")
 require("noah.lazy_init")
 
 

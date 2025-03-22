@@ -8,9 +8,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+vim.opt.wrap = true
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -30,3 +30,14 @@ vim.opt.updatetime = 50
 vim.opt.clipboard = 'unnamedplus' -- or 'unnamed'
 -- vim.opt.colorcolumn = "120"
 
+-- Show invisible characters
+vim.opt.list = true
+vim.opt.listchars = {
+    space = "·",
+    tab = "→ ",
+    trail = "·",
+    extends = "»",
+    precedes = "«",
+    eol = "↲",
+
+}
