@@ -36,7 +36,6 @@ vim.keymap.set(
     "<leader>ee",
     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
-
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
