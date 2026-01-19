@@ -17,13 +17,13 @@ vim.opt.termguicolors = true
 -- vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
--- vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80"
 vim.opt.winborder = "rounded"
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.inccommand = "split"
-
+vim.deprecate = function() end
 -- vim.opt.list = true
 -- vim.opt.listchars = {
 -- 	space = "·",
